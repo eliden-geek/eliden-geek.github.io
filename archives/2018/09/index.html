@@ -54,7 +54,7 @@
       <div id="brand">
         
         <a onClick="openUserCard()">
-          <img id="avatar" src="https://github.com/eliden-geek/eliden-geek.github.io/blob/master/images/avator.png"/>
+          <img id="avatar" src="https://s1.ax1x.com/2018/09/06/iCmP7d.png"/>
           <div id="homelink">Eliden的个人博客</div>
         </a>
       </div>
@@ -187,7 +187,7 @@
 
 <div id="user-card">
   <div class="center-field">
-    <img class="avatar" src="https://github.com/eliden-geek/eliden-geek.github.io/blob/master/images/avator.png">
+    <img class="avatar" src="https://s1.ax1x.com/2018/09/06/iCmP7d.png">
     <p id="description">Eliden的个人博客</p>
     <ul class="social-icon">
   
@@ -235,7 +235,35 @@ var isTriggerAnalytics = !( true && isIgnoreHost );
 
 <script>
 
-var vegasConfig = {"animation":"random","preload­Image":true,"transition":["slideLeft2","slideRight2","swirLeft","swirRight","flash2"],"timer":true,"delay":3000,"shuffle":true,"count":30};
+  // fancybox
+  var backgroundImages = [];
+  
+    
+      backgroundImages.push('https://s1.ax1x.com/2018/09/06/iCmec8.jpg');
+    
+      backgroundImages.push('https://s1.ax1x.com/2018/09/06/iCmaB4.jpg');
+    
+      backgroundImages.push('https://s1.ax1x.com/2018/09/06/iCm0E9.jpg');
+    
+      backgroundImages.push('https://s1.ax1x.com/2018/09/06/iCmAht.jpg');
+    
+      backgroundImages.push('https://s1.ax1x.com/2018/09/06/iCmV9P.jpg');
+    
+  
+  $('#post').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
+      var alt = this.alt || this.title;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'post' + i);
+    });
+  });
+  $(".fancybox").fancybox();
+
+var vegasConfig = {"animation":"random","preload­Image":true,"transition":["slideLeft2","slideRight2","zoomIn","swirLeft","swirRight"],"timer":true,"delay":3000,"shuffle":true,"count":30};
 var unsplashConfig = {"blur":false,"gravity":"north"};
 // is show background images
 var turnoffBackgroundImage = false;
