@@ -14,11 +14,13 @@
   <meta name="author" content="Eliden">
   
   
+  <meta name="keywords" content="Eliden的个人博客">
   
   
-    <meta name="description" content="">
   
-  <title> [ Eliden的个人博客 ]</title>
+    <meta name="description" content="Eliden的个人博客">
+  
+  <title>不停地奔赴，寻找最初的梦想，才会不枉此生。 [ Eliden的个人博客 ]</title>
   
   
     <link rel="shortcut icon" href="/favicon.ico">
@@ -37,11 +39,11 @@
 <div class="random-center hide-area">
   <div id="random-index">
     <div class="center-field">
-      <img class="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg" width=120 height=120 onClick="openUserCard()">
+      <img class="avatar" src="https://eliden-geek.github.io/avator.png" width=120 height=120 onClick="openUserCard()">
     </div>
     <div class="center-field">
       <div class="title" onClick="openUserCard()">Eliden的个人博客</div>
-      <div class="sub-title" onClick="openUserCard()"></div>
+      <div class="sub-title" onClick="openUserCard()">不停地奔赴，寻找最初的梦想，才会不枉此生。</div>
     </div>
     <hr >
     <div class="center-field">
@@ -74,8 +76,8 @@
 </div>
 <div id="user-card">
   <div class="center-field">
-    <img class="avatar" src="http://7te9fe.com1.z0.glb.clouddn.com/default_avatar.jpg">
-    <p id="description"></p>
+    <img class="avatar" src="https://eliden-geek.github.io/avator.png">
+    <p id="description">Eliden的个人博客</p>
     <ul class="social-icon">
   
   
@@ -121,22 +123,6 @@ var isTriggerAnalytics = !( true && isIgnoreHost );
   
 
 <script>
-
-  // fancybox
-  var backgroundImages = [];
-  
-  $('#post').each(function(i){
-    $(this).find('img').each(function(){
-      if ($(this).parent().hasClass('fancybox') || $(this).parent().hasClass('fancybox-thumb')) return;
-      var alt = this.alt || this.title;
-      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
-    });
-    $(this).find('.fancybox').each(function(){
-      $(this).attr('rel', 'post' + i);
-    });
-  });
-  $(".fancybox").fancybox();
 
 var vegasConfig = {"animation":"random","preload­Image":true,"transition":["slideLeft2","slideRight2","swirLeft","swirRight","flash2"],"timer":true,"delay":3000,"shuffle":true,"count":30};
 var unsplashConfig = {"blur":false,"gravity":"north"};
